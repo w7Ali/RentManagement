@@ -1,27 +1,9 @@
 from fastapi import FastAPI
 
-# from .database import (
-#     database,
-#     db,
-#     engine,
-#     SessionLocal,
-# )
+# app/__init__.py
+from .database import Base, engine, SessionLocal
+from .db import get_db
 
-
-# from .routers import (
-#     payment,
-#     room,
-#     users,
-# )
-
-# from .schemas import (
-    
-#     schemas
-# )
-
-from fastapi import FastAPI
-from app.database import engine, SessionLocal, Base
-# from app.models import Base
 from app.routers import room, users, payment
 
 def init_db():
