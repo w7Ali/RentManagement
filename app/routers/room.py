@@ -1,11 +1,11 @@
-from fastapi import APIRouter, Depends, HTTPException
-from typing import List
-from sqlalchemy.orm import Session
-from app.database import SessionLocal
-from app.internals.crud import room as crud_room
-from app.schemas.schemas import RoomCreate, Room
-from app.database.db import get_db
+# app/routers/rooms.py
 
+from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy.orm import Session
+from typing import List
+from app.database import get_db
+from app.internals import room as crud_room
+from app.schemas.room import RoomCreate, Room
 
 router = APIRouter()
 

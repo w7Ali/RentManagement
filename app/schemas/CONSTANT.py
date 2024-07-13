@@ -1,3 +1,5 @@
+# app/schemas/CONSTANT.py
+
 FAMILY_ONLY = "family_only"
 BOYS_ONLY = "boys_only"
 GIRLS_ONLY = "girls_only"

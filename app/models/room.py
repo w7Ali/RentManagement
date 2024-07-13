@@ -1,8 +1,8 @@
-from sqlalchemy import Column, Integer, String, Date, ForeignKey
+# app/models/room.py
+
+from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from app.database import Base
-from app.schemas.CONSTANT import ROOM_TYPES
-
 
 class RoomModel(Base):
     __tablename__ = "rooms"
@@ -13,4 +13,3 @@ class RoomModel(Base):
     work_count = Column(Integer, nullable=True)
     user_id = Column(Integer, ForeignKey("users.id"))
     owner = relationship("UserModel", back_populates="rooms")
-

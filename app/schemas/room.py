@@ -1,3 +1,5 @@
+# app/schemas/room.py
+
 from pydantic import BaseModel, validator
 from typing import Literal, Optional
 from app.schemas.CONSTANT import ROOM_TYPES

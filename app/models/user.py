@@ -1,4 +1,6 @@
-from sqlalchemy import Column, Integer, String, Date, ForeignKey
+# app/models/user.py
+
+from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from app.database import Base
 from app.schemas.CONSTANT import ROOM_TYPES
@@ -9,6 +11,6 @@ class UserModel(Base):
     name = Column(String, index=True)
     phone = Column(String, index=True)
     old_address = Column(String)
-    adharcard = Column(Integer)
+    adharcard = Column(String)
 
     rooms = relationship("RoomModel", back_populates="owner")
