@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from app.models import Room
+from app.schemas.models import Room
 from app.schemas import RoomCreate
 
 def create_room(db: Session, room: RoomCreate, user_id: int):

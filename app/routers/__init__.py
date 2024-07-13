@@ -1,22 +1,4 @@
-# from .payment import (
-#     # get_db,
-#     create_payment,
-#     read_payments,
-#     read_payment,
-#     monthly_summary,
-#     user_balance,
-# )
-
-# from room import (
-#     create_user,
-#     read_user,
-#     read_users,
-
-# )
-# import routers
-
-from .users import (
-    create_user,
-    read_user,
-    read_users,
-)
+# app/routers/__init__.py
+from .user import router as user_router
+from .room import router as room_router
+from .payment import router as payment_router
